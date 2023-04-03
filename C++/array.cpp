@@ -1,5 +1,5 @@
 #include<iostream>
-struct cou i
+
 #include<time.h>
 using namespace std;
 int main()
@@ -17,5 +17,5 @@ int main()
     }
     char x='J';
     cout<<(int)x;
-
+    return 0;
 }

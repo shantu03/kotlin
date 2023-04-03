@@ -1,3 +1,4 @@
+/*
 #include<iostream>
 using namespace std;
 class defaultt
@@ -39,4 +40,29 @@ int main()
     para k(4,6);                                //this is parametrized constructor; if value is not pass , then default values are used
 
     return 0;
+}
+*/
+
+#include<iostream>
+using namespace std;
+class cons
+{
+int a,b;
+public:
+cons()
+{
+cout<<"Constructor is created"<<endl;
+cin>>a>>b;
+}
+~cons()
+{
+
+cout<<"the value is "<<a<<"  "<<b<<endl;
+cout<<"Constructor is Deleted"<<endl;
+}
+};
+int main()
+{
+cons a;
+return 0;
 }
