@@ -1,4 +1,4 @@
-#include<iostream>
+/*#include<iostream>
 using namespace std;
 int main()
 {
@@ -21,3 +21,4 @@ int fact (int t)
         t=t*fact(t-1);
     }
 }
+*/
