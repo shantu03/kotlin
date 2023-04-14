@@ -1,7 +1,7 @@
 .vscode/ 
 git/
 *.exe
-
+DSA/
 C/
 README.md
 C++/commas
