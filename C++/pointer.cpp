@@ -24,4 +24,17 @@ char *msg {"hello world !"};
 std::cout<<msg<<std::endl;
 std::cout<<*msg<<std::endl;
 
+
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+int number {22};
+int *pp =&number;
+std::cout<<"++++++++++++++++++++++++"<<std::endl;
+std::cout<<number<<std::endl;
+std::cout<<pp<<std::endl;
+std::cout<<&number<<std::endl;
+std::cout<<*pp<<std::endl;
+
+
 }
