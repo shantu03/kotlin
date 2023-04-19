@@ -12,7 +12,7 @@ delete p; 	//to delete permanent allocated memory
 //delete p;	if you delete memory twice ,below statements are not going to work (core dumped error occur)
 std::cout<<*p<<std::endl;
 
-*p=9;
+//*p=9;
 std::cout<<*p<<std::endl;
 
 p=nullptr; 
@@ -39,7 +39,7 @@ std::cout<<"here we can access *ptr:  "<<*ptr<<std::endl;
 
 int *ptr_1 {new int {9}};
 int *ptr_2 {ptr_1};
-std::cout<<"before :   "<<ptr_2<<"   "<<*ptr_2<<std::endl; 
+std::cout<<std::endl<<"before :   "<<ptr_2<<"   "<<*ptr_2<<std::endl; 
 
 delete ptr_1;
 
