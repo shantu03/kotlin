@@ -20,9 +20,9 @@ std::cout<<q<<std::endl;
 
 
 // initialize with string literal
-char *msg {"hello world !"};
-std::cout<<msg<<std::endl;
-std::cout<<*msg<<std::endl;
+//char *msg {"hello world !"};
+//std::cout<<msg<<std::endl;
+//std::cout<<*msg<<std::endl;
 
 
 

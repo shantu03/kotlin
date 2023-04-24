@@ -20,12 +20,15 @@ std::cout<<p<<std::endl;
 
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
 std::cout<<"+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"<<std::endl<<std::endl;
 //----> Dangling Problems example
 
 //1] Uninitilized Pointer
 int *ptr;  //now this random address is stored so by modifying this address(by putting value in it) can crash program
-
+std::cout<<"Case 1: "<<std::endl;
+std::cout<<ptr<<"  "<<*ptr<<std::endl;
 //2]deleted Pointer 
 
 int k {69};
@@ -39,11 +42,16 @@ std::cout<<"here we can access *ptr:  "<<*ptr<<std::endl;
 
 int *ptr_1 {new int {9}};
 int *ptr_2 {ptr_1};
-std::cout<<std::endl<<"before :   "<<ptr_2<<"   "<<*ptr_2<<std::endl; 
+std::cout<<"ptr 1: "<<ptr_1<<"   "<<*ptr_1<<std::endl;
+ if(!(ptr_1==nullptr))
+std::cout<<std::endl<<"before :  ptr2   "<<ptr_2<<"   "<<*ptr_2<<std::endl; 
 
 delete ptr_1;
-
-std::cout<<"after :    "<<ptr_2<<"   "<<*ptr_2<<std::endl;
+ptr_1=nullptr;          //need to assign otherwise below code will show randow value
+if(!(ptr_1==nullptr))
+std::cout<<"after :  ptr 2  "<<ptr_2<<"   "<<*ptr_2<<std::endl;
+else
+std::cout<<"Warning  ptr 2 error"<<std::endl;
 }
 
 
