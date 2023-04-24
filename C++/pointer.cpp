@@ -37,4 +37,23 @@ std::cout<<&number<<std::endl;
 std::cout<<*pp<<std::endl;
 
 
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//Null Pointer Safety & calling deleter on a pointer containing nullptr
+std::cout<<"++++++++++++++++++++++++++++++++++++++++++++++++++++"<<std::endl;
+int * hh {};
+
+if(hh)
+std::cout<<"valid pointer"<<std::endl;
+else 
+std::cout<<"Invalid pointer"<<std::endl;
+
+delete hh;
+
+std::cout<<hh<<std::endl;
+if(hh)
+{
+delete hh;
+hh=nullptr;
+}
+
 }

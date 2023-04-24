@@ -14,6 +14,8 @@ int main()
 
 //--> Try & Catch operator this operator help us to understand certain code fail or not 
 
+
+/*
  try {
 int * data = new int [1000000000];   // in Try Bracket statememt will tested if error occured then--
 }
@@ -22,6 +24,22 @@ catch(std::exception& ex)	//then catch funciton going to catch the error with ex
 std::cout<<" Error occured here" <<ex.what()<<std::endl;   	//ex.what() explain what  error occured in statement 
 }
 // if no error occured then compiler going to ignore catch  fuction
+*/
+
+
+
+//std::nothrow
+
+for(size_t i{0}; i<1000;i++)
+{
+int * pp = new (std::nothrow) int [1000000000];
+
+if(pp!=nullptr)
+std::cout<<"data allocated sucessfully"<<std::endl;
+else
+std::cout<<"data allocation failed"<<std::endl;
+std::cout<<&pp<<"\t"<<pp<<"\t"<<*pp<<std::endl;
+}
 
 std::cout<<"End Of the Program "<<std::endl;
     return 0;
