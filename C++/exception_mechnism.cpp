@@ -16,6 +16,8 @@ int main()
 
 
 /*
+
+Second Method 
  try {
 int * data = new int [1000000000];   // in Try Bracket statememt will tested if error occured then--
 }
@@ -24,12 +26,16 @@ catch(std::exception& ex)	//then catch funciton going to catch the error with ex
 std::cout<<" Error occured here" <<ex.what()<<std::endl;   	//ex.what() explain what  error occured in statement 
 }
 // if no error occured then compiler going to ignore catch  fuction
+
+
 */
 
 
 
 //std::nothrow
 
+/*
+//Third Method 
 for(size_t i{0}; i<1000;i++)
 {
 int * pp = new (std::nothrow) int [1000000000];
@@ -41,6 +47,13 @@ std::cout<<"data allocation failed"<<std::endl;
 std::cout<<&pp<<"\t"<<pp<<"\t"<<*pp<<std::endl;
 }
 
+*/
+//fourth method
+{
+    int *k {new int {45}};
+
+}
+//    std::cout<<*k<<std::endl;     --> not going to work because k is declare out of scope 
 std::cout<<"End Of the Program "<<std::endl;
     return 0;
 }
