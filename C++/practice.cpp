@@ -46,3 +46,26 @@ cout<<endl;
 return 0;
 }
 
+int t;
+    cin >> t;
+    while (t != 0)
+    {
+        int n, k;
+        cin >> n >> k;
+        int arr[n];
+        for (int i = 0; i < n; i++)
+        {
+            cin >> arr[i];
+        }
+        int index = n - (k % n);
+        for (int i = index; i < n; i++)
+        {
+            cout << arr[i] << " ";
+        }
+        for (int i = 0; i < index; i++)
+        {
+            cout << arr[i] << " ";
+        }
+        cout << endl;
+        t = -1;
+    }
