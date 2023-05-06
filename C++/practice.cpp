@@ -16,14 +16,17 @@ int main() {
 
     return 0;
 }
-*/
 
 
+//MONK TEST NO.1 -- ARRAY and STRING
 #include <iostream>
 using namespace std;
 int main() {
 	int num;
 	cin >> num;
+
+while(num!=0)
+{
 int A,K;
 cin>>A>>K;
 int arr[A];
@@ -33,39 +36,71 @@ cin>>arr[i];
 }
 int t=A-(K%A);
 
-for(size_t i{0};i<t-1;i++)
+for(int i{t};i<A;i++)
 {
-cout<<arr[t+i]<<" ";
+cout<<arr[i]<<" ";
 }
-for(size_t i{0};i<=A-t;i++)
+for(size_t i{0};i<t;i++)
 {
 cout<<arr[i]<<" ";
 }
 
 cout<<endl;
+
+num--;
+}
 return 0;
 }
 
-int t;
-    cin >> t;
-    while (t != 0)
+
+*/
+
+//codechef good turn
+
+#include <iostream>
+using namespace std;
+struct hey
+{
+  
+    int t,k;
+    
+    void input()
     {
-        int n, k;
-        cin >> n >> k;
-        int arr[n];
-        for (int i = 0; i < n; i++)
-        {
-            cin >> arr[i];
-        }
-        int index = n - (k % n);
-        for (int i = index; i < n; i++)
-        {
-            cout << arr[i] << " ";
-        }
-        for (int i = 0; i < index; i++)
-        {
-            cout << arr[i] << " ";
-        }
-        cout << endl;
-        t = -1;
+        cin>>t>>k;
+ 
     }
+
+    void check()
+    {
+        if((t<1&&t>6)&&(k<1&&k>6))
+        {
+            cout<<"Crossed Limit"<<endl;
+            return;
+        }
+
+
+        if(t+k>6)
+        {
+            cout<<"YES"<<endl;
+        }
+        else
+        cout<<"NO"<<endl;
+    }
+};
+int main() {
+    int t;
+    cin>> t;
+struct hey arr[t];
+for(int i=0 ;i<t;i++)
+{
+    arr[i].input();
+
+}
+
+for(int i=0;i<t;i++)
+{
+    arr[i].check();
+}
+    
+	return 0;
+}
