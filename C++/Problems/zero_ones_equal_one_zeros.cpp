@@ -13,10 +13,16 @@ cin>>n;
 int arr[n];
 	if(n%2)
 	{
-	cout<<"even"<<endl;
+	arr[0]=0;
+	arr[1]=1;
+	arr[2]=0;
 	}
-else
-cout<<"odd"<<endl;
+	else
+	{
+	arr[0]=1;
+	arr[1]=0'
+	arr[2]=0;
+	}
 cases--;
 }
 return 0;
