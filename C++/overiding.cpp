@@ -1,7 +1,7 @@
 /* Overriding is concept of Run-time Polymorphism */
 #include<iostream>
 using namespace std;
-class base
+class baseclass
 {
 public:
 void add()
@@ -12,7 +12,7 @@ cout<<a+b<<endl;
 }
 };
 
-class derived:public base
+class derived:public baseclass
 {
 public:
 void add()   // Here above function was overwitten by this function

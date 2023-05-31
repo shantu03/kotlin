@@ -75,8 +75,12 @@ int a=1,b=2;
 firs()
 {
 cout<<"firs constructor createrd :  "<<a<<" "<<b<<endl;
+}~firs()
+{
+    cout<<"Destructor is here"<<endl;
 }
 };
+
 class seco:public firs
 {
 public:
@@ -85,9 +89,13 @@ seco()
 {
 cout<<"seco constructor created :  "<<a<<" "<<b<<" "<<c<<endl;
 }
+~seco()
+{
+    cout<<"destructor of second class "<<endl;
+}
 };
 int main()
 {
-seco p;
+seco p[2];
 return 0;
 }
