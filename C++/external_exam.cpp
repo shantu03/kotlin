@@ -138,7 +138,7 @@ ravi(ele);			//--->friend function
 
 */
 
-
+/*
 //				10. Static Function and static variable
 
 class A
@@ -155,4 +155,68 @@ int A::num=10;
 int main()
 {
 A::msg();
+}
+*/
+
+//
+
+
+/*
+//				11.Funciton overloading
+void over(int i,int j)
+{
+cout<<"addition is "<<i+j<<endl;
+}
+void over(double i,double j)
+{
+cout<<"floating addtion is "<<i+j<<endl;
+}
+void over(int k)
+{
+cout<<"square is "<<k*k<<endl;
+}
+int main()
+{
+over(2,5);
+over(22.1,44.2);
+over(5);
+return 0;
+}
+*/
+
+
+
+//				12. Operator overloading
+
+class A
+{
+int value;
+public:
+A()
+{
+value=0;
+}
+void operator ++(int )
+{
+value=10;
+}
+void operator ++()
+{
+value=5;
+}
+void display()
+{
+cout<<"value is "<<value<<endl;
+}};
+int main()
+{
+A k;
+cout<<"original value"<<endl;
+k.display();
+cout<<"prefix "<<endl;
+++k;
+k.display();
+cout<<"postfix"<<endl;
+k++;
+k.display();
 }
