@@ -185,7 +185,7 @@ return 0;
 */
 
 
-
+/*
 //				12. Operator overloading
 
 class A
@@ -219,4 +219,71 @@ k.display();
 cout<<"postfix"<<endl;
 k++;
 k.display();
+}
+*/
+
+/*
+//                                      13.Pure Virtual Funciton and Virtual Class
+class Base                  //----->Abstract Class
+{   int x;
+public:
+    virtual void fun()=0;           //----->pure virtule function
+    int getx()
+    {cout<<"in abstact class "<<endl;return 0;}
+
+};
+class Derived:public Base
+{
+    public:
+    void fun()                              //----->rewriting pure virtual function defination, it neccessary 
+    {
+        cout<<"in dervied class using pure virtual fucntion"<<endl;
+    }
+};
+
+//Virtula Class
+class A                 //----->base class
+{
+    int a=10;
+    protected:int b=20;
+    public:int c=30;
+        void show()
+    {
+        cout<<a<<"\t"<<b<<"\t"<<c<<endl;
+    }
+
+};
+class B:virtual public A            //------>virual public
+{
+    
+};
+class C:virtual public A{};         //------>virtual public
+class D:public B,public C{
+};
+
+int main()
+{
+    
+    Derived b;
+    b.fun();
+    b.getx();
+
+cout<<endl;
+    //Virtual class
+    D k;
+    k.show();
+}
+*/
+
+//                                      15.File Handling
+
+#include<fstream>
+int main()
+{
+int rn=1;
+float k=55;
+string c="pratham Atrigre";
+ofstream hello("textfile.txt");
+if(hello.is_open)
+
 }
