@@ -276,14 +276,71 @@ cout<<endl;
 */
 
 //                                      15.File Handling
-
+/*
 #include<fstream>
 int main()
 {
 int rn=1;
 float k=55;
 string c="pratham Atrigre";
-ofstream hello("textfile.txt");
-if(hello.is_open)
+ofstream hello ("textfile.txt"); 		//----->writing file 
+hello<<rn<<"\t"<<k<<"\t"<<c<<endl;
+hello.close();
+ifstream gett("textfile.txt");			//----> reading file
+if(gett.is_open())
+{
+char cc;
+while(gett)
+{
+cc=gett.get();
+cout<<cc;
+}
+}
+return 0;
+}
+*/
 
+#include<fstream>
+#include<stdio.h>
+
+int main()
+{
+    string a;
+    string b;
+    string c;
+    cout<<"enter file name with extension "<<endl;
+    cin>>a>>b>>c;
+    ofstream file1(a);
+	if(file1.is_open())
+{
+	file1<<"this is concent of file 1"<<endl;
+file1.close();
+cout<<"file 1 created succesfully"<<endl;
+}
+ofstream file2(b);
+if(file2.is_open())
+{
+file2<<"this is content of file 2"<<endl;
+file2.close();
+cout<<"file 2 created succesfully"<<endl;
+}
+
+ifstream f1(a);
+ifstream f2(b);
+ofstream f3(c);
+if(f1.is_open() && f2.is_open() && f3.is_open())
+{
+string line;
+while(getline(f1,line))
+{f3<<line<<endl;
+}
+while(getline(f2,line))
+{
+f3<<line<<endl;
+}
+f1.close();
+f2.close();
+f3.close();
+}
+return 0;
 }
