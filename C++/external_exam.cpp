@@ -1,28 +1,29 @@
 #include<iostream>
 using namespace std;
-/*
+
 //                                      2.   INLINE FUNCTION
-void defun(int x=1,y=1)		//--function overloading
+inline int infun(int k,int y)
 {
-return(x+b);
+return(k+y);
 }
-inline void fun(int a, int b)		//-->inline function
-{
-while(a)
-{
-    a=-b;
-}   
-}
+void defun(char = '$',int =3);
 int main()
 {
-    int k=9,j=1;
-    cout<<fun(9,1)<<endl;		//-->inline function
-
-defun(10);			//--->function overloading	
-defun(15,15);			//---->funciton overloading
+    cout<<infun(3,4)<<endl<<endl;
+    defun();
+    defun('#',9);
+}
+void defun(char k,int count)
+{
+    for(int i=0;i<count;i++)
+    {
+        cout<<k;
+    }
+    cout<<endl;
 }
 
-*/
+
+
 
 
 
@@ -299,7 +300,7 @@ cout<<cc;
 return 0;
 }
 */
-
+/*
 #include<fstream>
 #include<stdio.h>
 
@@ -344,3 +345,4 @@ f3.close();
 }
 return 0;
 }
+*/
