@@ -12,8 +12,10 @@ fun main()
 {
     var p= student(55,"Shantanu",true)
     p.show()
-    var z:student=p
+    var z=student()
+    z.name="Aditya"
     z.show()
+
 }
 
 
